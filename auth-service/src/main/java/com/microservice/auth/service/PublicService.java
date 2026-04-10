@@ -85,7 +85,7 @@ public class PublicService {
 		Tokens token = new Tokens();
 		token.setTenantKey(tokenStr);
 		token.setUserId(user.getId());
-		token.setExpiryDate(LocalDateTime.now().plusMinutes(15));
+		token.setExpiryDate(LocalDateTime.now().plusDays(7));
 
 		tokenRepository.save(token);
 	}
